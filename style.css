@@ -5,8 +5,15 @@
     margin: 0
   }
 
+html{
+    background-color:rgb(25, 25, 25);
+}
+
 body{
-    height: 100vh;
+    /* height: 100vh; */
+    width: 80%;
+    min-width: 800px;
+    margin: 0 auto;
     display: grid;
     grid-template: "h h h h h n n"
                    "d d g g g n n"
@@ -14,34 +21,173 @@ body{
                    "d d c c c n n"
                    "d d c c c n n"
                    "f f f f f f f";
+    border:3px solid grey;
+    background-color: black;
 }
 
 header{
     grid-area: h;
-    background-color: blue;
+    background-color: rgb(52, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: whitesmoke;
+    border-bottom: 3px solid grey;
+}
+
+header ::before {
+    content: "> > "
+}
+
+header ::after {
+    content: " < <"
 }
 
 nav{
     grid-area: n;
-    background-color: lightgreen;
+    background-color: darkslategrey;
+    padding: 2rem;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid grey;
+    
+}
+nav ul{
+    list-style: none;
+    position: sticky;
+    top: 30px;
+}
+nav ul li{
+    position: relative;
+    top: 10px;
+    padding: 2rem;
+    background-color: darkblue;
+    margin-bottom: 5px;
+    border-radius: 30%;
+}
+
+nav ul li a{
+    color: whitesmoke;
+    font-size: larger;
+}
+
+nav ul li a:visited {
+    color: lightcoral;
 }
 
 .data{
     grid-area: d;
-    background-color: lightblue;
+    background-color: darkgray;
+    border-right: 3px solid grey;
+}
+
+.data img{
+    border: 1px dashed blue;
+    border-radius:50%;
+    width: 80%;
+    margin: 10%;
+}
+
+.data p{
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.vazno{
+    font-weight: bold;
 }
 
 .cv{
     grid-area: c;
-    background-color: yellow;
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+    padding: 2rem;
+    margin-bottom: 15px;
+    border-bottom:3px solid grey;
+}
+
+.cv p::first-letter{
+    font-weight: bold;
+    color: olive;
+    font-size: 32px;
+}
+
+.cv :last-child{
+    font-style: italic;
 }
 
 .gallery{
     grid-area: g;
-    background-color: lightpink;
+    background-color: rgb(80, 80, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 0.5rem;
+    border-bottom: 3px solid grey;
+}
+
+.gallery img{
+    height: 250px;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    border: 5pt solid whitesmoke;
+}
+
+.gallery img:hover{
+    animation-name: nagib;
+    animation-duration: 1.5s;
 }
 
 footer{
     grid-area: f;
-    background-color: lightskyblue;
+    background-color: olive;
+    width: 1200px;
+    position: relative;
+    bottom: 15px;
+    margin: auto;
+    padding: 2em;
+    color: whitesmoke;
+    font-size: larger;
+    margin-top: 15px;
 }
+
+/* Animations */
+
+@keyframes nagib {
+    to{
+        transform: skew(30deg);
+    }
+}
+
+/* Responsive triba još dovršit*/
+
+@media only screen and (max-width:499px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    header{
+        width: 50%;
+    }
+    nav{
+        width: 50%;
+        position: static;
+    }
+    .data{
+        width: 50%;
+    }
+    .cv{
+        width: 50%;
+    }
+    .gallery{
+        width: 50%;
+    }
+    footer{
+        width: 50%;
+    }
+
+}
+
