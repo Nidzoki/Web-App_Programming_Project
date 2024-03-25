@@ -1,0 +1,47 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+  }
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template: "h h h h h n n"
+                   "d d g g g n n"
+                   "d d g g g n n"
+                   "d d c c c n n"
+                   "d d c c c n n"
+                   "f f f f f f f";
+}
+
+header{
+    grid-area: h;
+    background-color: blue;
+}
+
+nav{
+    grid-area: n;
+    background-color: lightgreen;
+}
+
+.data{
+    grid-area: d;
+    background-color: lightblue;
+}
+
+.cv{
+    grid-area: c;
+    background-color: yellow;
+}
+
+.gallery{
+    grid-area: g;
+    background-color: lightpink;
+}
+
+footer{
+    grid-area: f;
+    background-color: lightskyblue;
+}
