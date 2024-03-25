@@ -13,7 +13,7 @@ body{
     /* height: 100vh; */
     width: 80%;
     min-width: 800px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template: "h h h h h n n"
                    "d d g g g n n"
