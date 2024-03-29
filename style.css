@@ -10,7 +10,6 @@ html{
 }
 
 body{
-    /* height: 100vh; */
     width: 80%;
     min-width: 800px;
     margin: auto;
@@ -144,14 +143,14 @@ footer{
     grid-area: f;
     background-color: olive;
     width: 1200px;
-    position: relative;
-    bottom: 15px;
     margin: auto;
     padding: 2em;
     color: whitesmoke;
     font-size: larger;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 15px;
 }
+
 
 /* Animations */
 
@@ -187,6 +186,7 @@ footer{
     }
     footer{
         width: 50%;
+        position: static;
     }
 
 }
