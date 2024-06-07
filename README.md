@@ -1,4 +1,4 @@
-# Web-app programming course project (Projekt iz kolegija Programiranje mrežnih aplikacija)
+# Web-app programming course project
 
 This was a project which tested my HTML, CSS and JavaScript skills which I acquired in this course. I had to follow some tasks which I had to implement in the final solution.
 
